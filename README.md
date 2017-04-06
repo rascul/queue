@@ -1,8 +1,10 @@
 [![Build Status](https://travis-ci.org/rascul/queue.svg?branch=master)](https://travis-ci.org/rascul/queue)
 
+[![Documentation](https://docs.rs/queue/badge.svg)](https://docs.rs/queue)
+
 A FIFO queue built around `Vec` with an optional capacity.
 
-[Documentation](https://rascul.github.io/queue)
+[Documentation](https://docs.rs/queue)
 
 ```rust
 use queue::Queue;
