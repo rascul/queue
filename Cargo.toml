@@ -12,6 +12,6 @@ categories = ["data-structures"]
 
 
 [badges]
-travis-ci = { repository = "https://travis-ci.org/rascul/queue" }
+travis-ci = { repository = "/rascul/queue" }
 
 [dependencies]
