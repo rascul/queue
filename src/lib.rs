@@ -29,13 +29,17 @@
 #[cfg(test)]
 mod tests;
 
-/// A first in, first out queue built around `Vec`. An optional capacity can be
-/// set (or changed) to ensure the `Queue` never grows past a certain size. If
-/// the capacity is not specified (ie set to `None`) then the `Queue` will grow
-/// as needed. If you're worried about memory allocation, set a capacity and
-/// the necessary memory will be allocated at that time. Otherwise memory could
-/// be allocated, deallocated and reallocated as the queue changes size. The
-/// only requirement of the type used is that it implements the `Clone` trait.
+/// A first in, first out queue built around `Vec`.
+///
+/// An optional capacity can be set (or changed) to ensure the `Queue` never
+/// grows past a certain size. If the capacity is not specified (ie set to
+/// `None`) then the `Queue` will grow as needed. If you're worried about
+/// memory allocation, set a capacity and the necessary memory will be
+/// allocated at that time. Otherwise memory could be allocated, deallocated
+/// and reallocated as the `Queue` changes size.
+///
+/// The only requirement of the type used is that it implements the `Clone`
+/// trait.
 #[derive(Clone, Debug)]
 pub struct Queue<T> {
 	vec: Vec<T>,
