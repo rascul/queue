@@ -40,6 +40,22 @@ mod tests;
 ///
 /// The only requirement of the type used is that it implements the `Clone`
 /// trait.
+///
+/// # Example
+///
+/// ```
+/// use queue::Queue;
+///
+/// let mut q = Queue::with_capacity(5);
+///
+/// for i in 0..5 {
+/// 	q.queue(i).unwrap();
+/// }
+///
+/// for i in 0..5 {
+/// 	assert_eq!(q.dequeue(), Some(i));
+/// }
+/// ```
 #[derive(Clone, Debug)]
 pub struct Queue<T> {
 	vec: Vec<T>,
