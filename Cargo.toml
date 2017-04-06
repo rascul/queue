@@ -1,0 +1,8 @@
+[package]
+name = "queue"
+version = "0.1.0"
+authors = ["rascul <rascul3@gmail.com>"]
+description = "Simple wrapper around Vec to provide a FIFO queue."
+license = "MIT"
+
+[dependencies]
