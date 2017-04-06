@@ -4,6 +4,12 @@ version = "0.1.0"
 authors = ["rascul <rascul3@gmail.com>"]
 description = "Simple wrapper around Vec to provide a FIFO queue."
 license = "MIT"
+repository = "https://github.com/rascul/queue"
+documentation = "https://rascul.github.io/queue"
+readme = "README.md"
+keywords = ["fifo", "vec", "queue"]
+categories = ["data-structures"]
+
 
 [badges]
 travis-ci = { repository = "https://travis-ci.org/rascul/queue" }
