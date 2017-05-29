@@ -118,6 +118,28 @@ impl<T: Clone> Queue<T> {
 		}
 	}
 
+	/// Forcefully ad an item to the end of the `Queue`. If the `Queue` is at
+	/// capacity, the first item will be removed to make room. Returns `usize`
+	/// with the new length of the `Queue`.
+	///
+	/// # Example
+	///
+	/// ```
+	/// # use queue::Queue;
+	/// let mut q = Queue::with_capacity(1);
+	/// q.queue("hello").unwrap();
+	/// let _ = q.force_queue("world");
+	/// assert_eq!(q.peek(), Some("world"));
+	/// ```
+	pub fn force_queue(&mut self, item: T) -> usize {
+		if let Ok(len) = self.queue(item.clone()) {
+			return len;
+		} else {
+			let _ = self.dequeue();
+			return self.queue(item.clone()).unwrap();
+		}
+	}
+
 	/// Remove the next item from the `Queue`. Returns `Option<T>` so it will
 	/// return either `Some(T)` or `None` depending on if there's anything in
 	/// the `Queue` to get.

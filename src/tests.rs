@@ -45,6 +45,14 @@ fn peek_at_something() {
 }
 
 #[test]
+fn force_queue() {
+	let mut q: Queue<u8> = Queue::with_capacity(1);
+	q.queue(1).unwrap();
+	let _ = q.force_queue(2);
+	assert_eq!(q.peek(), Some(2));
+}
+
+#[test]
 fn no_len() {
 	let q: Queue<u8> = Queue::new();
 	assert_eq!(q.len(), 0);
