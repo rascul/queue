@@ -75,11 +75,25 @@ fn peek_at_something() {
 }
 
 #[test]
-fn force_queue() {
+fn force_queue_with_capacity() {
 	let mut q: Queue<u8> = Queue::with_capacity(1);
 	q.queue(1).unwrap();
 	let _ = q.force_queue(2);
 	assert_eq!(q.peek(), Some(2));
+}
+
+#[test]
+fn force_queue_with_capacity_check_size() {
+	let mut q = Queue::with_capacity(1);
+	q.queue(1).unwrap();
+	assert_eq!(1, q.force_queue(2));
+}
+
+#[test]
+fn force_queue_no_capacity() {
+	let mut q = Queue::new();
+	q.queue(1).unwrap();
+	assert_eq!(2, q.force_queue(2));
 }
 
 #[test]
