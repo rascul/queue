@@ -1,11 +1,11 @@
+image: rust:latest
+
 test:cargo:
-  image: rust:latest
   script:
   - rustc --version && cargo --version
   - cargo test --all --verbose
 
 pages:
-  image: rust:latest
   stage: deploy
   script:
   - cargo doc
