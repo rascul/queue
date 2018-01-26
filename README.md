@@ -1,6 +1,6 @@
 [![Crate](https://img.shields.io/crates/v/queue.svg)](https://crates.io/crates/queue)
 [![Documentation](https://docs.rs/queue/badge.svg)](https://docs.rs/queue)
-[![Build Status](https://travis-ci.org/rascul/queue.svg?branch=master)](https://travis-ci.org/rascul/queue)
+[![Pipeline Status](https://gitlab.com/rascul/queue/badges/master/pipeline.svg)](https://gitlab.com/rascul/queue/commits/master)
 
 A FIFO queue built around `Vec` with an optional capacity.
 
