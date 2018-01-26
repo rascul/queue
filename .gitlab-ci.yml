@@ -1,17 +1,18 @@
-image: alpine:latest
+test:cargo:
+  image: rust:latest
+  script:
+  - rustc --version && cargo --version
+  - cargo test --all --verbose
 
 pages:
+  image: alpine:latest
   stage: deploy
   script:
-  - mv docs public
+  - cargo doc
+  - mv target/doc public
+  - mv docs/index.html public/
   artifacts:
     paths:
     - public
   only:
   - master
-
-test:cargo:
-  image: "rust:latest"
-  script:
-  - rustc --version && cargo --version
-  - cargo test --all --verbose
