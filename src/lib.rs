@@ -154,7 +154,7 @@ impl<T: Clone> Queue<T> {
 	/// assert_eq!(q.dequeue(), Some("hello"));
 	/// ```
 	pub fn dequeue(&mut self) -> Option<T> {
-		if self.vec.len() > 0 {
+		if !self.vec.is_empty() {
 			Some(self.vec.remove(0))
 		} else {
 			None
@@ -172,7 +172,7 @@ impl<T: Clone> Queue<T> {
 	/// assert_eq!(q.peek(), Some(12));
 	/// ```
 	pub fn peek(&self) -> Option<T> {
-		if self.vec.len() > 0 {
+		if !self.vec.is_empty() {
 			Some(self.vec[0].clone())
 		} else {
 			None
