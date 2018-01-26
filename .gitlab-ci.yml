@@ -5,7 +5,7 @@ test:cargo:
   - cargo test --all --verbose
 
 pages:
-  image: alpine:latest
+  image: rust:latest
   stage: deploy
   script:
   - cargo doc
