@@ -27,6 +27,12 @@ fn dequeue() {
 }
 
 #[test]
+fn dequeue_empty() {
+	let mut q: Queue<i64> = Queue::new();
+	assert_eq!(q.dequeue(), None);
+}
+
+#[test]
 fn no_capacity() {
 	let q: Queue<u8> = Queue::new();
 	assert_eq!(q.capacity(), None);
