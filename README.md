@@ -4,7 +4,14 @@
 
 A FIFO queue built around `Vec` with an optional capacity.
 
-[Documentation](https://docs.rs/queue)
+This project is hosted at [Gitlab](https://gitlab.com/rascul/queue) and the
+repo is mirrored to [Github](https://github.com/rascul/queue). Pull requests,
+issues, etc. will be at [Gitlab](https://gitlab.com/rascul/queue).
+
+Documentation is located at <https://rascul.gitlab.io/queue> for master
+and at at [Docs.rs](https://docs.rs/queue) for published releases.
+
+A crate is made available at [Crates.io](https://crates.io/crates/queue).
 
 ```rust
 use queue::Queue;
