@@ -12,6 +12,6 @@ categories = ["data-structures"]
 
 
 [badges]
-travis-ci = { repository = "/rascul/queue" }
+gitlab = { repository = "/rascul/queue", branch = "master" }
 
 [dependencies]
