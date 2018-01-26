@@ -161,6 +161,22 @@ impl<T: Clone> Queue<T> {
 		}
 	}
 
+	/// Return a `&Vec<T>` for the `Queue<T>`.
+	///
+	/// # Example
+	///
+	/// ```
+	/// # use queue::Queue;
+	/// let mut q = Queue::new();
+	/// q.queue(1).unwrap();
+	/// q.queue(2).unwrap();
+	/// q.queue(3).unwrap();
+	/// assert_eq!(&vec![1, 2, 3], q.vec());
+	/// ```
+	pub fn vec(&self) -> &Vec<T> {
+		&self.vec
+	}
+
 	/// Peek at the next item in the `Queue`, if there's something there.
 	///
 	/// # Example

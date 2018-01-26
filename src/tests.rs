@@ -32,6 +32,23 @@ fn queue_full_capacity() {
 }
 
 #[test]
+fn vec_empty() {
+	let q: Queue<i64> = Queue::new();
+	let v: Vec<i64> = Vec::new();
+	assert_eq!(&v, q.vec());
+}
+
+#[test]
+fn vec_some() {
+	let mut q = Queue::new();
+	q.queue(1).unwrap();
+	q.queue(2).unwrap();
+	q.queue(3).unwrap();
+	let v = vec![1, 2, 3];
+	assert_eq!(&v, q.vec());
+}
+
+#[test]
 fn peek_at_empty() {
 	let q: Queue<u8> = Queue::with_capacity(1);
 	assert_eq!(q.peek(), None);
