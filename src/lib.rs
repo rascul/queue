@@ -135,7 +135,7 @@ impl<T: Clone> Queue<T> {
 		}
 	}
 
-	/// Forcefully ad an item to the end of the `Queue`. If the `Queue` is at
+	/// Forcefully add an item to the end of the `Queue`. If the `Queue` is at
 	/// capacity, the first item will be removed to make room. Returns `usize`
 	/// with the new length of the `Queue`.
 	///
