@@ -56,7 +56,7 @@ mod tests;
 /// 	assert_eq!(q.dequeue(), Some(i));
 /// }
 /// ```
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct Queue<T> {
 	vec: Vec<T>,
 	cap: Option<usize>,
