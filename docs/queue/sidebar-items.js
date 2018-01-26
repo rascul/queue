@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["Queue","A first in, first out queue built around `Vec`."]]});
