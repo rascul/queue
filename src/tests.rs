@@ -1,6 +1,19 @@
 use super::*;
 
 #[test]
+fn from_vec() {
+	let q = Queue::from(vec![1, 2, 3]);
+	assert_eq!(&vec![1, 2, 3], q.vec());
+}
+
+#[test]
+fn from_empty_vec() {
+	let v: Vec<i64> = Vec::new();
+	let q = Queue::from(v.clone());
+	assert_eq!(&v, q.vec());
+}
+
+#[test]
 fn queue() {
 	let mut q = Queue::new();
 	assert_eq!(q.queue("hello"), Ok(1));

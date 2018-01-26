@@ -62,6 +62,23 @@ pub struct Queue<T> {
 	cap: Option<usize>,
 }
 
+impl<T: Clone> From<Vec<T>> for Queue<T> {
+	/// Constructs a new `Queue<T>` from a `Vec<T>`.
+	///
+	/// # Example
+	///
+	/// ```
+	/// # use queue::Queue;
+	/// let q = Queue::from(vec![1, 2, 3]);
+	/// ```
+	fn from(v: Vec<T>) -> Queue<T> {
+		Queue {
+			vec: v,
+			cap: None
+		}
+	}
+}
+
 impl<T: Clone> Queue<T> {
 	/// Constructs a new `Queue<T>`.
 	///
