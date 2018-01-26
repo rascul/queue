@@ -65,3 +65,16 @@ fn some_len() {
 	q.queue(2).unwrap();
 	assert_eq!(q.len(), 2);
 }
+
+#[test]
+fn is_empty_empty() {
+	let q: Queue<i64> = Queue::new();
+	assert_eq!(q.is_empty(), true);
+}
+
+#[test]
+fn is_empty_some() {
+	let mut q = Queue::new();
+	q.queue(1).unwrap();
+	assert_eq!(q.is_empty(), false);
+}

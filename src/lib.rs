@@ -194,6 +194,21 @@ impl<T: Clone> Queue<T> {
 		self.vec.len()
 	}
 
+	/// Check if the `Queue` is empty.
+	///
+	/// # Example
+	///
+	/// ```
+	/// # use queue::Queue;
+	/// let mut q = Queue::new();
+	/// assert_eq!(q.is_empty(), true);
+	/// q.queue(1).unwrap();
+	/// assert_eq!(q.is_empty(), false);
+	/// ```
+	pub fn is_empty(&self) -> bool {
+		self.vec.is_empty()
+	}
+
 	/// Query the capacity for a `Queue`. If there is no capacity set (the
 	/// `Queue` can grow as needed) then `None` will be returned, otherwise
 	/// it will be `Some(usize)`.
