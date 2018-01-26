@@ -101,7 +101,7 @@ length of the <code>Queue</code>, or <code>Err(())</code> if there is no more ro
 <span class="ident">q</span>.<span class="ident">queue</span>(<span class="string">&quot;hello&quot;</span>).<span class="ident">unwrap</span>();
 <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">q</span>.<span class="ident">peek</span>(), <span class="prelude-val">Some</span>(<span class="string">&quot;hello&quot;</span>));</pre>
 </div><h4 id='method.force_queue' class="method"><span id='force_queue.v' class='invisible'><code>pub fn <a href='#method.force_queue' class='fnname'>force_queue</a>(&amp;mut self, item: T) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/queue/lib.rs.html#151-158' title='goto source code'>[src]</a></span></h4>
-<div class='docblock'><p>Forcefully ad an item to the end of the <code>Queue</code>. If the <code>Queue</code> is at
+<div class='docblock'><p>Forcefully add an item to the end of the <code>Queue</code>. If the <code>Queue</code> is at
 capacity, the first item will be removed to make room. Returns <code>usize</code>
 with the new length of the <code>Queue</code>.</p>
 
