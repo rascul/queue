@@ -24,6 +24,6 @@ q.queue("out").unwrap();
 q.queue("there!").unwrap();
 
 while let Some(item) = q.dequeue() {
-    println!("{}", item);
+	println!("{}", item);
 }
 ```
