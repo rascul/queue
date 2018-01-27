@@ -1,6 +1,7 @@
 [![Crate](https://img.shields.io/crates/v/queue.svg)](https://crates.io/crates/queue)
 [![Documentation](https://docs.rs/queue/badge.svg)](https://docs.rs/queue)
 [![Pipeline Status](https://gitlab.com/rascul/queue/badges/master/pipeline.svg)](https://gitlab.com/rascul/queue/commits/master)
+[![Coverage](https://gitlab.com/rascul/queue/badges/master/coverage.svg?job=cov)](https://rascul.gitlab.io/queue/cov/index.html)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.com/rascul/queue/blob/master/LICENSE)
 
 A FIFO queue built around [`Vec`](https://doc.rust-lang.org/std/vec/struct.Vec.html)
