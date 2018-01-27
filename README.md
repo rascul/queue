@@ -3,7 +3,7 @@
 [![Pipeline Status](https://gitlab.com/rascul/queue/badges/master/pipeline.svg)](https://gitlab.com/rascul/queue/commits/master)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.com/rascul/queue/blob/master/LICENSE)
 
-A FIFO queue built around `[Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)`
+A FIFO queue built around [`Vec`](https://doc.rust-lang.org/std/vec/struct.Vec.html)
 with an optional capacity.
 
 This project is hosted at [Gitlab](https://gitlab.com/rascul/queue) and the
