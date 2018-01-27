@@ -14,5 +14,6 @@ categories = ["data-structures"]
 
 [badges]
 gitlab = { repository = "/rascul/queue", branch = "master" }
+maintenance = { status = "passively-maintained" }
 
 [dependencies]

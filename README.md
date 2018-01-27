@@ -3,6 +3,7 @@
 [![Pipeline Status](https://gitlab.com/rascul/queue/badges/master/pipeline.svg)](https://gitlab.com/rascul/queue/pipelines)
 [![Coverage](https://gitlab.com/rascul/queue/badges/master/coverage.svg?job=cov)](https://rascul.gitlab.io/queue/cov/index.html)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.com/rascul/queue/blob/master/LICENSE)
+![Maintenance](https://img.shields.io/badge/maintenance-passively--maintained-yellowgreen.svg)]
 
 A FIFO queue built around [`Vec`](https://doc.rust-lang.org/std/vec/struct.Vec.html)
 with an optional capacity.
