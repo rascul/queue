@@ -19,7 +19,6 @@ doc:
   script:
   - ~/.cargo/bin/cargo doc
   - mv target/doc public
-  - mv docs/index.html public/
   artifacts:
     paths:
     - public
@@ -46,7 +45,7 @@ cov:
 pages:
   stage: deploy
   script:
-  - echo 'nothing to run'
+  - mv index.html public/
   artifacts:
     paths:
     - public
