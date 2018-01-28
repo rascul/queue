@@ -1,23 +1,14 @@
-image: opensuse:latest
-
-before_script:
-- zypper ar -f -g https://download.opensuse.org/repositories/home:/HessiJames/openSUSE_Leap_42.2/home:HessiJames.repo
-- zypper --gpg-auto-import-keys ref
-- zypper in -y kcov curl
-- zypper in -y -t pattern devel_C_C++
-- curl https://sh.rustup.rs > rustup
-- chmod +x rustup
-- ./rustup -y
+image: rascul3/rust:latest
 
 build:
   stage: build
   script:
-  - ~/.cargo/bin/cargo build
+  - cargo build
 
 doc:
   stage: build
   script:
-  - ~/.cargo/bin/cargo doc
+  - cargo doc
   - mv target/doc public
   artifacts:
     paths:
@@ -26,15 +17,13 @@ doc:
 test:
   stage: test
   script:
-  - ~/.cargo/bin/cargo test
+  - cargo test
 
 cov:
   stage: test
   coverage: '/^Coverage+:\s(\d+(?:\.\d+)?)/'
   script:
-  - ~/.cargo/bin/cargo install cargo-kcov
-  - ~/.cargo/bin/cargo build
-  - ~/.cargo/bin/cargo kcov
+  - cargo kcov
   - COVERAGE=$(grep -Po 'covered":.*?[^\\]"' target/cov/index.json | grep "[0-9]*\.[0-9]" -o)
   - echo "Coverage:" $COVERAGE
   - mv target/cov public/
