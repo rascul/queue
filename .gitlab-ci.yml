@@ -23,6 +23,7 @@ cov:
   stage: test
   coverage: '/^Coverage+:\s(\d+(?:\.\d+)?)/'
   script:
+  - cargo build
   - cargo kcov
   - COVERAGE=$(grep -Po 'covered":.*?[^\\]"' target/cov/index.json | grep "[0-9]*\.[0-9]" -o)
   - echo "Coverage:" $COVERAGE
